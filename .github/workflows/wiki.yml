@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: perl -i -pe 's;(\[.*?\])\((?!https:\/\/)(.*?)\.md\);\1(\2);' wiki/*.md
+      - run: perl -i -pe 's;(\[.*?\])\((?!https:\/\/)(.*?)\.md\);\1(\2);g' wiki/*.md
       - uses: actions4gh/deploy-wiki@v1
